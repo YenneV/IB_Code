@@ -1,0 +1,49 @@
+Changes in v1.2
+
+This is the first version in which I have altered the geometry.  Changes with respect to v1.1 are as follows:
+
+Global variables:
+
+Ls changed to (2*xlength)/h
+ds changed to h/2
+
+Initialise function:
+
+X[s] changed to s*ds
+Y[s] changed to 0
+
+_______________________________________________________________________________________________
+
+Test 1: 
+Parameters used:
+ST = 0.1, Interface activity = -0.01, koff = 0.01
+
+Result: segmentation fault at time point 00
+Graph: time point 00 has line at approx steady state conc, but also high concentration in centre where sphere was in Carl's code.  Flow patterns unusual.
+
+-----------------------------------------------------------------------------------------------
+
+Test 2:
+Parameters used:
+ST = 0.1, Interface activity = -0.01, koff = 0
+
+Result: Error in NAG routine f04bac (NE_RCOND) at time point 00
+Graph: time point 00 has line at steady state concentration, same unusual flow patterns, but rest of plot area is white not black??  Not sure what this corresponds to.
+
+-----------------------------------------------------------------------------------------------
+
+Test 3:
+Parameters used:
+ST = 0.1, Interface activity = -0.01, koff = 0.5
+
+Result: segmentation fault at time point 00
+Graph: time point 00 looks same as for koff = 0.01.
+
+----------------------------------------------------------------------------------------------
+
+Test 4:
+Parameters used:
+ST = 0.1, Interface activity = -0.01, koff = 1
+
+Result: segmentation fault at time point 00
+Graph: 

@@ -1,0 +1,30 @@
+Changes in v1.3
+
+As v1.2 but with area_check function commented out
+
+_______________________________________________________________________________________________
+
+Test 1: ST0.1_Zc-0.01_koff0.01
+Parameters used:
+ST = 0.1, Interface activity = -0.01, koff = 0.01
+
+Result: reached time pont 976.  'Removing buckled point' message showing once or twice per time point, after point 976 started getting 'flldcc fail code: 400' messages, then some more 'removing buckled point' messages, then 4759 segmentation fault.  Screenshot saved in folder as v1.3_test1.png.
+Graph: plot for time point 00 looks same as for v1.2 with non zero koff.
+
+-----------------------------------------------------------------------------------------------
+
+Test 2: ST0.1_Zc-0.01_koff0
+Parameters used:
+ST = 0.1, Interface activity = -0.01, koff = 0
+
+Result: reached time point 811, removing buckled point messages as in previous, ended in 6035 segmentation fault.  Screenshot saved in folder as v1.3_test2.png.
+Graph: plot for time point 00 looks same as for v1.2 with zero koff.
+
+------------------------------------------------------------------------------------------------
+
+Test 3: ST0.1_Zc-0.01_koff0.85
+Parameters used:
+ST = 0.1, Interface activity = -0.01, koff = 0.85
+
+Result: reached time point 3, removing buckled point messages, f11dcc fail code: 400, each time point starts with few fail codes in f11dcc then quite a few 'removing buckled point' messages.  After that fail codes 400 and 8, never moved on to 4th time point so stopped it after few hours.
+Graph: 

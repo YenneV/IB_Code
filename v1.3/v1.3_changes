@@ -1,6 +1,6 @@
 Changes in v1.3
 
-As v1.2 but with area_check function commented out
+Change set 1: As v1.2 but with area_check function commented out
 
 _______________________________________________________________________________________________
 
@@ -28,3 +28,9 @@ ST = 0.1, Interface activity = -0.01, koff = 0.85
 
 Result: reached time point 3, removing buckled point messages, f11dcc fail code: 400, each time point starts with few fail codes in f11dcc then quite a few 'removing buckled point' messages.  After that fail codes 400 and 8, never moved on to 4th time point so stopped it after few hours.
 Graph: 
+
+_________________________________________________________________________________________________
+
+Change set 2: changed denominator for Havb expression in ifconc part of initialise(), was 2pir, changed to xlength which is the initial length of the boundary as straight horizontal line.
+
+Set main to print out Ls for each time point, see line 271.

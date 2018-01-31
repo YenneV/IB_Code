@@ -1,6 +1,6 @@
 Changes in v1.3
 
-Change set 1: As v1.2 but with area_check function commented out
+Master Change set 1: As v1.2 but with area_check function commented out
 
 _______________________________________________________________________________________________
 
@@ -31,6 +31,10 @@ Graph:
 
 _________________________________________________________________________________________________
 
-Change set 2: changed denominator for Havb expression in ifconc part of initialise(), was 2pir, changed to xlength which is the initial length of the boundary as straight horizontal line.
+Master Change set 2: changed denominator for Havb expression in ifconc part of initialise(), was 2pir, changed to xlength which is the initial length of the boundary as straight horizontal line.
 
 Set main to print out Ls for each time point, see line 271.
+
+___________________________________________________________________________________________________
+
+Master Change set 3: changed stepskip to 5000 so it will output bulk and boundary files every 5000th time step instead of 20,000. Tidied up a bit to make printouts to terminal easier to read.

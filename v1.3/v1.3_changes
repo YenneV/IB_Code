@@ -34,3 +34,22 @@ ________________________________________________________________________________
 Change set 2: changed denominator for Havb expression in ifconc part of initialise(), was 2pir, changed to xlength which is the initial length of the boundary as straight horizontal line.
 
 Set main to print out Ls for each time point, see line 271.
+
+___________________________________________________________________________________________________
+
+Test 4: ST0.1_Zc-0.01_koff0.01a
+
+Result: reached time point 6194 before getting the usual fail codes.  Number of points fluctuating between 240 - 300.  Removing buckled point message again, and fail codes 400 and 8 in f11dcc.
+
+_________________________________________________________________________________________________
+
+Change set 3: updated spacing in printouts of time point and boundary points to make it easier to read.  Commented out remesh function so it doesn't add or remove points, points fixed at 240.
+
+____________________________________________________________________________________________________
+
+Test 5: ST0.1_Zc-0.01_koff0.01
+Parameters used:
+ST = 0.1, Interface activity = -0.01, koff = 0.01
+
+Result: Reached time point 22342 then started giving f11dcc fail code 400.
+Graph: graphs plotted for time point 00 and time point 20,000.  First time point is same as previous, with line but with high concentration around centre.  Next time point showed line fragmented, still with concentration in centre.
